@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
+body {
+  background-color:#121212;
+  text-align: center;
+  color:#fff;
+  padding-top:10em;
+  font-family: 'Source Code Pro', monospace;
+
+
+}
+
+ul {
+  list-style: none;
+}
+li:before {
+   content: '> '
+ }
+
+ li {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.9s 1;
+  animation: fadeIn 0.9s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+li:nth-child(5n+1) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 6.5s;
+}
+
+li:nth-child(5n+2) {
+  -webkit-animation-delay: 1.0s;
+  animation-delay: 7.0s;
+}
+
+li:nth-child(5n+3) {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 7.5s;
+}
+
+li:nth-child(5n+4) {
+  -webkit-animation-delay: 2.0s;
+  animation-delay: 8.0s;
+}
+
+
+
+ @-webkit-keyframes fadeIn {
+   0% {
+     opacity: 0.0;
+   }
+   100% {
+     opacity: 1.0;
+   }
+ }
+
+ @keyframes fadeIn {
+   0% {
+     opacity: 0.0;
+   }
+   100% {
+     opacity: 1.0;
+   }
+
+
+
+
+* { color:#fff; text-decoration: none;}
