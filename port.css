@@ -5,20 +5,69 @@ body {
   background-color:#121212;
   text-align: center;
   color:#fff;
-  padding-top:10em;
   font-family: 'Source Code Pro', monospace;
-
 
 }
 
 ul {
   list-style: none;
 }
-li:before {
+
+
+#top ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#top li {
+  float: right;
+  position: relative;
+}
+#top a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+#top a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  right: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, right 0.3s ease 0s;
+  width: 0;
+}
+#top a:hover:after {
+  width: 100%;
+  right: 0;
+}
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+#languages li:before {
    content: '> '
  }
 
- li {
+ #languages li {
   opacity: 0;
   -webkit-animation: fadeIn 0.9s 1;
   animation: fadeIn 0.9s 1;
@@ -26,22 +75,22 @@ li:before {
   animation-fill-mode: forwards;
 }
 
-li:nth-child(5n+1) {
+#languages li:nth-child(5n+1) {
   -webkit-animation-delay: 0.5s;
   animation-delay: 6.5s;
 }
 
-li:nth-child(5n+2) {
+#languages li:nth-child(5n+2) {
   -webkit-animation-delay: 1.0s;
   animation-delay: 7.0s;
 }
 
-li:nth-child(5n+3) {
+#languages li:nth-child(5n+3) {
   -webkit-animation-delay: 1.5s;
   animation-delay: 7.5s;
 }
 
-li:nth-child(5n+4) {
+#languages li:nth-child(5n+4) {
   -webkit-animation-delay: 2.0s;
   animation-delay: 8.0s;
 }
