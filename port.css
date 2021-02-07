@@ -8,6 +8,13 @@ body {
   font-family: 'Source Code Pro', monospace;
 
 }
+#languages{
+  font-size: 30px
+}
+h1{
+  font-size: 50px;
+  font-weight: lighter;
+}
 
 ul {
   list-style: none;
@@ -34,7 +41,7 @@ ul {
   padding: 15px 20px;
   position: relative;
 }
-#top a:after {
+#top a.notactive:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -49,6 +56,12 @@ ul {
 #top a:hover:after {
   width: 100%;
   right: 0;
+}
+
+#top a.active{
+  height: 18px;
+  border-bottom: 2px solid;
+
 }
 @media screen and (max-height: 300px) {
 	ul {
@@ -77,22 +90,22 @@ ul {
 
 #languages li:nth-child(5n+1) {
   -webkit-animation-delay: 0.5s;
-  animation-delay: 6.5s;
+  animation-delay: 4.5s;
 }
 
 #languages li:nth-child(5n+2) {
   -webkit-animation-delay: 1.0s;
-  animation-delay: 7.0s;
+  animation-delay: 5.0s;
 }
 
 #languages li:nth-child(5n+3) {
   -webkit-animation-delay: 1.5s;
-  animation-delay: 7.5s;
+  animation-delay: 5.5s;
 }
 
 #languages li:nth-child(5n+4) {
   -webkit-animation-delay: 2.0s;
-  animation-delay: 8.0s;
+  animation-delay: 6.0s;
 }
 
 
@@ -113,8 +126,11 @@ ul {
    100% {
      opacity: 1.0;
    }
+}
 
-
+@media print {
+  .page { page-break-after: always; }
+}
 
 
 * { color:#fff; text-decoration: none;}
