@@ -126,7 +126,16 @@ div.pro{
 
 }
 
-
+div.tag{
+  display: inline-block;
+  width: fit-content;
+  margin-right: 10px;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  background-color: #3A3939;
+  border-radius: 22px;
+  text-align: center;
+}
 
  @keyframes fadeIn {
    0% {
